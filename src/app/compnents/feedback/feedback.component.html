@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="text">
+        FeedBack Form
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-row">
+            <div class="input-data">
+                <input id="fnam" type="text" formControlName="fName">
+                <div class="underline"></div>
+                <label for="fnam">First Name</label>
+                <div *ngIf="isSubmitted || (fName?.invalid && (fName?.dirty || fName?.touched))"
+                    class="validation-error">
+                    <div *ngIf="fName?.errors?.['required']">
+                        First Name is required.
+                    </div>
+                    <div *ngIf="fName?.errors?.['pattern']">
+                        First Name must include letters only.
+                    </div>
+                </div>
+            </div>
+            <div class="input-data">
+                <input id="lname" type="text" formControlName="lName">
+                <div class="underline"></div>
+                <label for="lname">Last Name</label>
+                <div *ngIf="isSubmitted || (lName?.invalid && (lName?.dirty || lName?.touched))"
+                    class="validation-error">
+                    <div *ngIf="lName?.errors?.['required']">
+                        Last Name is required.
+                    </div>
+                    <div *ngIf="lName?.errors?.['pattern']">
+                        Last Name must include letters only.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input id="emailAdd" type="text" formControlName="email">
+                <div class="underline"></div>
+                <label for="emailAdd">Email</label>
+                <div *ngIf="isSubmitted || (email?.invalid && (email?.dirty || email?.touched))"
+                    class="validation-error">
+                    <div *ngIf="email?.errors?.['required']">
+                        Email is required.
+                    </div>
+                    <div *ngIf="email?.errors?.['pattern']">
+                        Email must be in correct format.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row ">
+            <div class="input-data textarea">
+                <textarea id="msg" cols="30" rows="10" formControlName="message"></textarea>
+                <div class="underline"></div>
+                <label for="msg">Write your message</label>
+                <div *ngIf="isSubmitted || (message?.invalid && (message?.dirty || message?.touched))"
+                    class="validation-error">
+                    <div *ngIf="message?.errors?.['required']">
+                        Message is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default" type="submit" name="button"> Submit
+        </button>
+    </form>
+</div>

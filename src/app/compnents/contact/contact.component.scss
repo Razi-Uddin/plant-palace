@@ -1,0 +1,51 @@
+button{
+    display: inline;
+    width: 120px;
+    font-size: 18px;
+    color: white;
+    background-color: #c2651c;
+    margin-top: 10px;
+}
+button:hover{
+    
+    display: inline;
+    width: 120px;
+    font-size: 18px;
+    color: #c2651c;
+    background-color: #fff;
+    border: solid 1px #c2651c;
+}
+
+a{
+    text-decoration: none;
+}
+
+#contact .card i,
+#contact .card h4 {
+    color: #c2651c;
+}
+
+#contact .card:hover i,
+#contact .card:hover h4 {
+    color: #c2651c;
+    opacity: 0.5;
+}
+.card-body a:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 88);
+}
+.card-body a{
+    color: rgb(0, 0, 88);
+}
+
+// New Custom Css
+.h1_con{
+    font-family: Montserrat sans-serif;
+text-align: center;
+font-size: 35px;
+}
+.con_flex{
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

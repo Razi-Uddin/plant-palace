@@ -1,0 +1,20 @@
+.btnsty{
+    color: #fcfcfc;
+    border-color: #c2651c;
+}
+.btnsty::before{
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    z-index: -1;
+}

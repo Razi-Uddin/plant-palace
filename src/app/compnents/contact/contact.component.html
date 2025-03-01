@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="row con_flex">
+        <div class="col-md-6">
+            <h1 class="h1_con">Contact Us</h1>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="form-group">
+                    <input id="name" type="text" class="form-control mt-3" name="name" placeholder="name"
+                        formControlName="name">
+                    <div *ngIf="isSubmitted || (name?.invalid && (name?.dirty || name?.touched))"
+                        class="validation-error">
+                        <div *ngIf="name?.errors?.['required']">
+                            Name is required.
+                        </div>
+                        <div *ngIf="name?.errors?.['pattern']">
+                            Name must include letters only.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control mt-3" name="E-mail" placeholder="E-mail"
+                        formControlName="email">
+                    <div *ngIf="isSubmitted || (email?.invalid && (email?.dirty || email?.touched))"
+                        class="validation-error">
+                        <div *ngIf="email?.errors?.['required']">
+                            Email is required.
+                        </div>
+                        <div *ngIf="email?.errors?.['pattern']">
+                            Email must be in correct format.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <input id="phone" type="tel" class="form-control mt-3" name="Phone" placeholder="Phone"
+                        formControlName="phone">
+                    <div *ngIf="isSubmitted || (phone?.invalid && (phone?.dirty || phone?.touched))"
+                        class="validation-error">
+                        <div *ngIf="phone?.errors?.['required']">
+                            Phone No. is required.
+                        </div>
+                        <div *ngIf="phone?.errors?.['pattern']">
+                            Phone No. must be in correct format.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <textarea id="message" class="form-control mt-3" name="Message" rows="3" placeholder="Enter your Message"
+                        formControlName="message"></textarea>
+                    <div *ngIf="isSubmitted || (message?.invalid && (message?.dirty || message?.touched))"
+                        class="validation-error">
+                        <div *ngIf="message?.errors?.['required']">
+                            Message is required.
+                        </div>
+                    </div>
+                </div>
+               
+
+                    <button class="btn btn-default" type="submit" name="button"> Submit</button>
+                
+                
+            </form>
+
+        </div>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+                        <div class="card border-0">
+                            <div class="card-body text-center">
+                                <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                                <h4 class="text-uppercase mb-5">call us</h4>
+                                <p>+92 3091256320</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+                        <div class="card border-0">
+                            <div class="card-body text-center">
+                                <i class="fa fa-envelope fa-5x mb-3" aria-hidden="true"></i>
+                                <h4 class="text-uppercase mb-5">Mail</h4>
+                                <address>m.raziuddin99@gmail.com</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+                        <div class="card border-0">
+                            <div class="card-body text-center">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-facebook fa-5x mb-3" aria-hidden="true"></i>
+                                    <h4 class="text-uppercase mb-5">Facebook</h4>
+                                    <p>Plant Palace</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+                        <div class="card border-0">
+                            <div class="card-body text-center">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-instagram fa-5x mb-3" aria-hidden="true"></i>
+                                    <h4 class="text-uppercase mb-5">Instagram</h4>
+                                    <p>Plant Palace</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>

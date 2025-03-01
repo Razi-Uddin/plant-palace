@@ -1,0 +1,35 @@
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}
+.btnsty a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.btnsty a:hover {
+    text-decoration: none;
+    color: #c2651c;
+
+}
+
+.btnsty{
+    background: #c2651c;
+    width: 110px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 7px;
+}
+.btnsty:hover{
+background-color: white;
+color: #c2651c;
+text-decoration-color: #c2651c;
+border-color: #c2651c;
+transform: translate3d("28deg");
+border: 1px solid #c2651c;
+}
+
+.btnsty:hover a{
+    color: #c2651c;
+}
